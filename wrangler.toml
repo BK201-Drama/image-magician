@@ -5,6 +5,6 @@ compatibility_date = "2024-01-01"
 bucket = "./dist"
 
 [build]
-command = "yarn build"
+command = "bash build.sh"
 cwd = "."
 
