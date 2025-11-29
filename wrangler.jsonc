@@ -1,7 +1,12 @@
 {
+  // Workers 项目名称（与 Cloudflare Dashboard 中的 Worker 名称保持一致）
   "name": "image-magician",
+  // Workers 运行时兼容日期
   "compatibility_date": "2025-11-26",
-  "pages_build_output_dir": "./dist"
+  // Worker 入口文件（我们会新增 worker.ts）
+  "main": "worker.ts",
+  // 将 dist 目录作为静态资源目录，交由 ASSETS 绑定处理
+  "assets": {
+    "directory": "./dist"
+  }
 }
-
-
