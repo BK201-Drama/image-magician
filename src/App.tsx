@@ -4,6 +4,7 @@ import { ConfigProvider } from 'antd';
 import zhCN from 'antd/locale/zh_CN';
 import enUS from 'antd/locale/en_US';
 import ruRU from 'antd/locale/ru_RU';
+import frFR from 'antd/locale/fr_FR';
 import { getCurrentLanguage } from './i18n';
 import { t } from './i18n';
 import Navigation from './components/Navigation';
@@ -61,6 +62,7 @@ function App() {
   const antdLocale = 
     currentLang === 'zh' ? zhCN :
     currentLang === 'ru' ? ruRU :
+    currentLang === 'fr' ? frFR :
     enUS;
 
   return (
