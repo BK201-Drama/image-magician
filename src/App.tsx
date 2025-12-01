@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/locale/zh_CN';
 import enUS from 'antd/locale/en_US';
+import ruRU from 'antd/locale/ru_RU';
 import { getCurrentLanguage } from './i18n';
 import { t } from './i18n';
 import Navigation from './components/Navigation';
@@ -57,7 +58,10 @@ function renderRoutes(routeConfigs: RouteConfig[]): JSX.Element[] {
  */
 function App() {
   const currentLang = getCurrentLanguage();
-  const antdLocale = currentLang === 'zh' ? zhCN : enUS;
+  const antdLocale = 
+    currentLang === 'zh' ? zhCN :
+    currentLang === 'ru' ? ruRU :
+    enUS;
 
   return (
     <StoreProvider>

@@ -2,6 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import zh from './locales/zh.json';
 import en from './locales/en.json';
+import ru from './locales/ru.json';
 
 // 语言持久化的 key
 const LANGUAGE_KEY = 'image-magician-language';
@@ -30,6 +31,7 @@ i18n
     resources: {
       zh: { translation: zh },
       en: { translation: en },
+      ru: { translation: ru },
     },
     lng: getSavedLanguage(), // 使用保存的语言
     fallbackLng: 'en', // 英文优先作为后备语言

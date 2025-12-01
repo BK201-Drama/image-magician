@@ -4,3 +4,29 @@ body {
   margin: 0;
   min-height: 100vh;
 }
+
+/* 导航栏样式优化 - 适配多语言字体 */
+.language-selector .ant-select-selector {
+  padding-right: 32px !important;
+}
+
+/* 确保菜单项在不同语言下都能正常显示 */
+.ant-menu-horizontal {
+  border-bottom: none !important;
+  white-space: nowrap;
+}
+
+.ant-menu-horizontal > .ant-menu-item,
+.ant-menu-horizontal > .ant-menu-submenu {
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
+/* 响应式：小屏幕下调整导航栏 */
+@media (max-width: 768px) {
+  .ant-menu-horizontal > .ant-menu-item,
+  .ant-menu-horizontal > .ant-menu-submenu {
+    padding: 0 8px;
+    font-size: 14px;
+  }
+}
