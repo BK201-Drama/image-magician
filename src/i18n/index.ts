@@ -6,12 +6,12 @@ import en from './locales/en.json';
 // 语言持久化的 key
 const LANGUAGE_KEY = 'image-magician-language';
 
-// 从 localStorage 获取保存的语言，如果没有则使用默认语言
+// 从 localStorage 获取保存的语言，如果没有则使用默认语言（英文优先）
 const getSavedLanguage = (): string => {
   try {
-    return localStorage.getItem(LANGUAGE_KEY) || 'zh';
+    return localStorage.getItem(LANGUAGE_KEY) || 'en';
   } catch {
-    return 'zh';
+    return 'en';
   }
 };
 
@@ -32,7 +32,7 @@ i18n
       en: { translation: en },
     },
     lng: getSavedLanguage(), // 使用保存的语言
-    fallbackLng: 'zh',
+    fallbackLng: 'en', // 英文优先作为后备语言
     keySeparator: false, // 禁用嵌套，key就是字面值
     interpolation: {
       escapeValue: false,
