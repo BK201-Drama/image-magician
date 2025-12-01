@@ -12,6 +12,6 @@
   // 让该 Worker 绑定到指定域名
   // 注意：请确认 img-magician.com 已接入 Cloudflare 且 DNS 为 Proxied（橙云）
   "routes": [
-    "image-magician.com/*"
+    "img-magician.com/*"
   ]
 }
